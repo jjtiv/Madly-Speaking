@@ -1,0 +1,44 @@
+[
+    {
+      "input": "Write a story about a lonely robot who finds a friend.",
+      "output": "The robot wandered through empty streets until it met a curious dog. Together, they explored the world in silence and joy."
+    },
+    {
+      "input": "Tell a magical story about a hidden forest.",
+      "output": "In the forest no map could find, trees whispered spells and glowing mushrooms lit the way to a sleeping unicorn."
+    },
+    {
+      "input": "Describe an epic space adventure involving a lost pilot.",
+      "output": "After drifting through deep space, Captain Lyra landed on a mysterious planet filled with ancient alien technology."
+    },
+    {
+      "input": "Write a funny story about a clumsy wizard.",
+      "output": "Gregory the wizard sneezed mid-spell and turned the village pond into a giant bowl of pudding."
+    },
+    {
+      "input": "Tell a dramatic story about a knight who betrayed the kingdom.",
+      "output": "Sir Cedric lowered his sword, the royal seal in flames behind him. Loyalty had a new master now—the enemy queen."
+    },
+    {
+      "input": "Write a story about a girl who can talk to animals.",
+      "output": "Maya discovered her gift when a squirrel warned her about a falling branch. From that day on, the forest became her classroom."
+    },
+    {
+      "input": "Describe a peaceful day in a futuristic city.",
+      "output": "Hover cars glided silently above crystal walkways as holograms shimmered with morning news. Children played with robotic pets under the glass dome."
+    },
+    {
+      "input": "Write a story about two rivals stuck in an elevator.",
+      "output": "At first, silence. Then, insults. But after two hours and a shared snack bar, even the fiercest competitors found laughter."
+    },
+    {
+      "input": "Tell a love story between a time traveler and a librarian.",
+      "output": "Every decade, he returned to the same library bench. She was always there, reading, waiting, never asking questions."
+    },
+    {
+      "input": "Write a spooky story about a music box.",
+      "output": "Every night at 3 a.m., the dusty music box played a lullaby no one remembered owning—and something in the dark listened."
+    }
+  ]
+  
+  
