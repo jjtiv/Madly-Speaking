@@ -8,26 +8,37 @@
 </head>
 <body>
     <header>
-        <a href="#">Hi</a>
-        <a href="#">Hi</a>
-        <a href="#">Hi</a>
+        <a href="#">Home</a>
+        <span>|</span>
+        <a href="#">About</a>
+        <span>|</span>
+        <a href="#">Contact</a>
     </header>
 
+    <div id="titleFrame">
+        <h1>Madly Speaking</h1>
+        <h3>A MadLibs Generator</h3>
+    </div>
+
+    <div id="inputs">
+        <form action="/submit" method="POST">
+            <label for="prompt">Please enter a MadLib prompt...</label><br>
+            <input type="text"><br><br>
+        </form>
+
+        <form action="/submit" method="POST">
+            <label for="tone">Add Tone to Story</label><br>
+            <input type="text"><br><br>
+        </form>
+
+        <button>Generate for Me</button>
+    </div>
     
-    <h1>This is the homepage...!</h1>
-    <a href="/temp">Go to temp</a>
-    <div>
-        <img src="../img/bunny.jfif" alt="bunny">
+    <div id="bunnyPic">
+        <img src="{{ url_for('static', filename='bunny.png') }}" alt="bunny" width="50%" height="auto">
     </div>
 
     
-    <footer>
-        <ul>
-            <li>Bye</li>
-            <li>Bye</li>
-            <li>Bye</li>
-            <li>Bye</li>
-        </ul>
-    </footer>
+    <footer></footer>
 </body>
 </html>
