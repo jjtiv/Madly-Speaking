@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'PalatinoRoman';
+    src: url('{{ url_for("static", filename="fonts/palatino-light.ttf") }}') format('truetype');
+    font-weight: 50;
+    font-style: normal;
+  }
+  
+
 body{
     background-color: rgb(247, 235, 182);
     margin: 0;
@@ -33,12 +41,59 @@ header a:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family: 'PalatinoRoman';
+    font-weight: 50;
+    margin-top: 10%;
 }
+
+#titleFrame h1{
+    font-size: 450%;
+    color: #5b3e12;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-weight: lighter;
+}
+
+#titleFrame h3{
+    font-size: 300%;
+    color: #b77d25;
+    padding-bottom: 0;
+    margin: 0;
+    margin-bottom: 2%;
+    font-weight: lighter;
+}
+
 
 #inputs{
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family: 'PalatinoRoman';
+}
+
+#inputs form #promptBar{
+    width: 50%;
+    padding: 18px 50px 18px 20px;
+    background-color: #dddada;
+    border: 0px solid #807e7e;
+    font-family: 'PalatinoRoman';
+    border-radius: 999px;
+    font-size: 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#promptBar::placeholder {
+    text-align: center;
+}
+
+#submitArrow {
+    left: -15px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #555;
 }
 
 #bunnyPic{
