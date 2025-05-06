@@ -6,7 +6,7 @@ tokenizer = T5Tokenizer.from_pretrained("google-t5/t5-base")
 model = T5ForConditionalGeneration.from_pretrained("google-t5/t5-base")
 
 def generate_story(prompt, max_length=150, num_beams=4):
-    # Clear instruction using a general generation task prefix
+
     input_text = f"Write a short creative story about the following: {prompt}"
 
     print(f"DEBUG: Input to model -> {input_text}")
