@@ -2,6 +2,9 @@ from flask import Flask, render_template
 from backend.pos_tagger import mask_pos
 # for text to speech not working yet
 #from backend.tts_engine import save_audio
+from backend.story_generator import generate_story
+from flask import request
+
 
 app = Flask(__name__)
 
@@ -12,6 +15,12 @@ def home():
 @app.route('/temp')
 def temp():
     return render_template("temp.html")
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    prompt = request.form.get("prompt", "")
+    story = generate_story(prompt) if prompt else "No prompt provided."
+    return render_template("index.html", story=story)
 
 # edit once our generator is better
 @app.route('/mask')
