@@ -103,6 +103,17 @@ header a:hover{
     max-width: 50%;
 }
 
+#story-output {
+    background-color: #dddada; 
+    color: black;
+    padding: 20px;
+    margin: 30px auto;
+    width: 60%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'PalatinoRoman';
+}
 
 
 footer{
