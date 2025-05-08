@@ -2,12 +2,12 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 import torch
 print("Model loading... please wait.")
 # load T5 model + tokenizer once globally
-tokenizer = T5Tokenizer.from_pretrained("google-t5/t5-base")
-model = T5ForConditionalGeneration.from_pretrained("google-t5/t5-base")
+tokenizer = T5Tokenizer.from_pretrained("jakinmo1/csv_final")
+model = T5ForConditionalGeneration.from_pretrained("jakinmo1/csv_final")
 
 def generate_story(prompt, max_length=150, num_beams=4):
 
-    input_text = f"Write a short creative story about the following: {prompt}"
+    input_text = f"Write a story about {prompt}"
 
     print(f"DEBUG: Input to model -> {input_text}")
 
