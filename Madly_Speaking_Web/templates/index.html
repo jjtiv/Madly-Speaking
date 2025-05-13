@@ -33,12 +33,41 @@
     </div>
 
     {% if story %}
-    <div id="story-output">
-        <h2>Generated Story:</h2>
-        <p>{{ story }}</p>
-    </div>
-    {% endif %}
+  <div id="story-output">
+    <h2>Generated Story:</h2>
+    <p id="story-text">{{ story }}</p>
 
+    <button id="btn-tts">🔊 Listen</button>
+    <audio id="tts-audio" controls hidden></audio>
+  </div>
+  {% endif %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn  = document.getElementById('btn-tts');
+      const text = document.getElementById('story-text');
+      const audio = document.getElementById('tts-audio');
+  
+      if (!btn || !text) return;
+  
+      btn.addEventListener('click', async () => {
+        const story = text.innerText.trim();
+        if (!story) return alert('No story to read.');
+  
+        const resp = await fetch('/tts?text=' + encodeURIComponent(story));
+        if (!resp.ok) {
+          return alert('TTS failed: ' + resp.statusText);
+        }
+  
+        const blob = await resp.blob();
+        const url  = URL.createObjectURL(blob);
+  
+        audio.src = url;
+        audio.hidden = false;
+        audio.play();
+      });
+    });
+    </script>
 
     <div id="bunnyPic">
         <img src="{{ url_for('static', filename='bunny.png') }}" alt="bunny" width="50%" height="auto">
