@@ -115,6 +115,26 @@ header a:hover{
     font-family: 'PalatinoRoman';
 }
 
+#back-home {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home-button {
+    background-color: #b77d25;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-family: 'PalatinoRoman';
+    border-radius: 25px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #5b3e12;
+}
+
 
 footer{
     background-color: rgb(130, 130, 130);
