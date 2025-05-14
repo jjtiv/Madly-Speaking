@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madly Speaking - Fill In Blanks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <header>
+        <a href="/">Home</a>
+        <span>|</span>
+        <a href="#">About</a>
+        <span>|</span>
+        <a href="#">Contact</a>
+    </header>
+
+    <div id="titleFrame">
+        <h1>Madly Speaking</h1>
+        <h3>Fill in the Blanks</h3>
+    </div>
+
+    <div id="inputs">
+        {% set label_map = {
+            "NOUN": "thing",
+            "PROPN": "name",
+            "VERB": "action",
+            "ADJ": "description"
+        } %}
+
+        <form action="/final_story" method="POST">
+            {% for word, index, context in context_blanks %}
+            {% set pos = word.strip("_") %}
+            <p><strong>Context:</strong> {{ context }}</p>
+            <label for="fill{{ index }}">Enter a {{ pos.lower() }}:</label><br>
+            <input type="text" name="fill{{ index }}"><br><br>
+        {% endfor %}
+
+        <input type="hidden" name="masked_story" value="{{ masked_story }}">
+        <button type="submit" id="submitArrow" style="font-size: 20px;">Submit Story</button>
+    </form>
+    </div>
+
+    <div id="bunnyPic">
+        <img src="{{ url_for('static', filename='bunny.png') }}" alt="bunny" width="50%" height="auto">
+    </div>
+
+    <footer></footer>
+</body>
+</html>
+
