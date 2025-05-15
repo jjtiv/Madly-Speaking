@@ -15,9 +15,9 @@ def generate_story(prompt, max_length=150, num_beams=4):
 
     output_ids = model.generate(
         input_ids,
-        max_length=max_length,
+        max_length=512,
         num_beams=num_beams,
-        early_stopping=True,
+        early_stopping=False,
         no_repeat_ngram_size=2
     )
 
