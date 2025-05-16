@@ -1,3 +1,5 @@
+# If you have any problems during this set up please email ebeyers1@umbc.edu
+
 # Madly Speaking Web
 
 Madly Speaking Web is an interactive web application that generates context aware stories based on user prompts, allows users to fill in blanks for a Mad Libs-style experience, and supports real-time text-to-speech synthesis.
