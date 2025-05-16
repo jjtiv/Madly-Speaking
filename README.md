@@ -17,19 +17,22 @@ Madly Speaking Web is an interactive web application that generates context awar
 git clone git@github.com:jjtiv/Madly-Speaking.git
 cd Madly-Speaking/Madly_Speaking_Web
 ```
+2. Create a virtual environment (optional but recommended)
+python -m venv venv
+source venv/bin/activate   # On Windows: .\venv\Scripts\activate
 
-2. Install dependencies:
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
 
-3. Run the web app:
+4. Run the web app:
 ```bash
 python app.py
 ```
 
-4. Navigate to  Running on `http://127.0.0.1:5000` in your browser.
+5. Navigate to  Running on `http://127.0.0.1:5000` in your browser.
 
 ## Project Structure
 
@@ -46,7 +49,7 @@ Madly_Speaking_Web/
 │   ├── pos_tagger.py         # POS masking logic
 │   ├── story_generator.py    # T5 model story generation
 │   ├── tts_engine.py         # TTS using gTTS
-├── static/                  
+├── static/                   # CSS, Images, Fonts
 └── README.md                 
 ```
 
@@ -62,6 +65,7 @@ Madly_Speaking_Web/
 ## Future Improvements
 
 - Add more tones (e.g., dramatic, mysterious, romantic)
+- Improve coherence in masking logic
 
 
 
